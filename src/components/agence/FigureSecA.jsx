@@ -6,21 +6,21 @@ import React, { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const imageArray = [
-  "https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7",
+  "/imgs/imgi_1_Carl_480x640.jpg",
 
-  "https://k72.ca/images/teamMembers/Olivier_480x640.jpg?w=480&h=640&fit=crop&s=c13569c0753117d04f1a93cf7b446d64",
+  "/imgs/imgi_2_Olivier_480x640.jpg",
 
-  "https://k72.ca/images/teamMembers/ChantalG_480x640.jpg?w=480&h=640&fit=crop&s=13093769c4a19cecd291ddcccd898991",
+  "/imgs/imgi_3_ChantalG_480x640.jpg",
 
-  "https://k72.ca/images/teamMembers/Michele_480X640.jpg?w=480&h=640&fit=crop&s=ce85dc6d140947736baa739d0e59dab2",
+  "/imgs/imgi_4_Michele_480X640.jpg",
 
-  "https://k72.ca/images/teamMembers/MEL_480X640.jpg?w=480&h=640&fit=crop&s=07c9bfee89816720b873e6748a276af6",
+  "/imgs/imgi_5_MEL_480X640.jpg",
 
-  "https://k72.ca/images/teamMembers/CAMILLE_480X640_2.jpg?w=480&h=640&fit=crop&s=74317575b2d72fd11c5296615c383e4a",
+  "/imgs/imgi_6_CAMILLE_480X640_2.jpg",
 
-  "https://k72.ca/images/teamMembers/MEGGIE_480X640_2.jpg?w=480&h=640&fit=crop&s=3604b19f8fc7b40f517954147698d847",
+  "/imgs/imgi_7_MEGGIE_480X640_2.jpg",
 
-  "https://k72.ca/images/teamMembers/joel_480X640_3.jpg?w=480&h=640&fit=crop&s=1cadbf143b3aa916b1b414464acbb4d6",
+  "/imgs/imgi_8_joel_480X640_3.jpg",
 ];
 
 function FigureSecA() {
@@ -55,7 +55,6 @@ function FigureSecA() {
           end: "top -90%",
           pin: imageDiv.current,
           pinSpacing: false,
-          markers: true,
 
           onUpdate: (self) => {
             const index = Math.min(
@@ -74,7 +73,7 @@ function FigureSecA() {
   );
 
   return (
-      <figure className="absolute border-2  inset-0 z-[-1] ">
+      <figure className="absolute inset-0 z-[-1] ">
         <div
           ref={imageDiv}
           className="a_images w-[clamp(1rem,15vw,13.5rem)] h-[clamp(1rem,20vw,18.5rem)] top-[17vw] left-[30vw] relative rounded-[1.2em] overflow-hidden bg-red-500   "
