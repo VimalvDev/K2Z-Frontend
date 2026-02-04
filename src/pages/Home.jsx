@@ -8,7 +8,7 @@ function Home() {
   return (
     // Semantic <main> tag to wrap the main content of the page
     <div className=" overflow-hidden relative min-h-screen ">
-      <section className="home_content relative flex justify-between min-h-screen flex-col border-2 ">
+      <section className="home_content relative flex justify-between min-h-screen flex-col border-2 p-2">
         <HomeHeroText />
 
         <div className="bottom_wrapper flex flex-col ">
