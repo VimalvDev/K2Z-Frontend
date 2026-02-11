@@ -4,7 +4,7 @@ function Video() {
   return (
     <video
       className="h-full w-full object-cover "
-      src="/public/videoK2z.mp4"
+      src="/public/69496b2d.mp4"
       muted
       loop
       autoPlay

@@ -24,27 +24,8 @@ const imageArray = [
 ];
 
 function FigureSecA() {
-  const decodedImages = useRef([]);
   const imageDiv = useRef(null);
   const imageRef = useRef(null);
-
-  // useEffect(()=>{
-  //     imageArray.forEach((src)=>{
-  //         const img = new Image();
-  //         img.src = src;
-  //     })
-  // }, [])
-  useEffect(() => {
-    Promise.all(
-      imageArray.map((src) => {
-        const img = new Image();
-        img.src = src;
-        return img.decode().then(() => img);
-      }),
-    ).then((imgs) => {
-      decodedImages.current = imgs;
-    });
-  }, []);
 
   useGSAP(
     () => {
@@ -53,7 +34,7 @@ function FigureSecA() {
           trigger: imageDiv.current,
           start: "top 35%",
           end: "top -90%",
-          pin: imageDiv.current,
+          pin: true,
           pinSpacing: false,
 
           onUpdate: (self) => {
@@ -61,10 +42,8 @@ function FigureSecA() {
               imageArray.length - 1,
               Math.floor(self.progress * imageArray.length),
             );
-            const decodedImg = decodedImages.current[index];
-            if (decodedImg) {
-              imageRef.current.src = decodedImg.src;
-            }
+            console.log(imageArray[index])
+            imageRef.current.src = imageArray[index];
           },
         },
       });
@@ -73,19 +52,19 @@ function FigureSecA() {
   );
 
   return (
-      <figure className="absolute inset-0 z-[-1] ">
-        <div
-          ref={imageDiv}
-          className="a_images w-[clamp(1rem,15vw,13.5rem)] h-[clamp(1rem,20vw,18.5rem)] top-[17vw] left-[30vw] relative rounded-[1.2em] overflow-hidden bg-red-500   "
-        >
-          <img
-            ref={imageRef}
-            className="object-cover object-top w-full h-full"
-            src={imageArray[0]}
-            alt=""
-          />
-        </div>
-      </figure>
+    <figure className="absolute inset-0 z-[-1] ">
+      <div
+        ref={imageDiv}
+        className="a_images w-[clamp(1rem,15vw,13.5rem)] h-[clamp(1rem,20vw,18.5rem)] top-[17vw] left-[30vw] relative rounded-[1.2em] overflow-hidden   "
+      >
+        <img
+          ref={imageRef}
+          className="object-cover object-top w-full h-full"
+          src={imageArray[0]}
+          alt=""
+        />
+      </div>
+    </figure>
   );
 }
 
