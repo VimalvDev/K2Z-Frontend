@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,29 +37,30 @@ function FigureSecA() {
           pin: true,
           pinSpacing: false,
 
-          onUpdate: (self) => {
-            const index = Math.min(
-              imageArray.length - 1,
-              Math.floor(self.progress * imageArray.length),
-            );
-            console.log(imageArray[index])
-            imageRef.current.src = imageArray[index];
-          },
+          // onUpdate: (self) => {
+          //   const index = Math.min(
+          //     imageArray.length - 1,
+          //     Math.floor(self.progress * imageArray.length),
+          //   );
+          //   console.log(imageArray[index])
+          //   imageRef.current.src = imageArray[index];
+          // },
         },
       });
     },
     { scope: imageDiv },
   );
-
+console.log("chla")
   return (
-    <figure className="absolute inset-0 z-[-1] ">
+    <figure  className=" absolute inset-0 z-[-1] ">
+
       <div
         ref={imageDiv}
-        className="a_images w-[clamp(1rem,15vw,13.5rem)] h-[clamp(1rem,20vw,18.5rem)] top-[17vw] left-[30vw] relative rounded-[1.2em] overflow-hidden   "
+        className="a_images w-[clamp(1rem,15vw,13.5rem)] h-[clamp(1rem,20vw,18.5rem)] top-[17vw] left-[30vw] relative rounded-[1.2em]  "
       >
         <img
           ref={imageRef}
-          className="object-cover object-top w-full h-full"
+          className="object-cover object-top w-full h-full "
           src={imageArray[0]}
           alt=""
         />
