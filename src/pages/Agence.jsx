@@ -3,7 +3,7 @@ import HeadingSecA from "../components/agence/section_a/HeadingSecA";
 import ParagraphSecA from "../components/agence/section_a/ParagraphSecA";
 import BottomText from "../components/agence/section_a/BottomText";
 import FigureSecA from "../components/agence/section_a/FigureSecA";
-import Page1 from "../components/agence/section_c/Page1";
+import SectionC from "../components/agence/section_c/SectionC";
 function Agence() {
   return (
     <div>
@@ -17,7 +17,7 @@ function Agence() {
           <BottomText />
         </div>
       </div>
-        <Page1 />
+        <SectionC />
     </div>
   );
 }

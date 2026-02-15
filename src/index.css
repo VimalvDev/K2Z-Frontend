@@ -34,3 +34,6 @@ body {
   font-family: "Lausanne-300", sans-serif;
 }
 
+li, a{
+  cursor: pointer;
+}
