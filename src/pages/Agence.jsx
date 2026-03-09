@@ -4,6 +4,7 @@ import ParagraphSecA from "../components/agence/section_a/ParagraphSecA";
 import BottomText from "../components/agence/section_a/BottomText";
 import FigureSecA from "../components/agence/section_a/FigureSecA";
 import SectionC from "../components/agence/section_c/SectionC";
+import SectionB from "../components/agence/section_b/SectionB";
 function Agence() {
   return (
     <div>
@@ -17,6 +18,7 @@ function Agence() {
           <BottomText />
         </div>
       </div>
+        <SectionB />
         <SectionC />
     </div>
   );

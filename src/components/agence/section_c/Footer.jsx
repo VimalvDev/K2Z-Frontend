@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <footer className="sticky_sections">
-      <div className=" min-w-full container footer min-h-[62vh] contain    bg-black text-white p-2.5 flex flex-col justify-between  ">
+      <div className=" min-w-full footer min-h-[62vh] contain    bg-black text-white p-2.5 flex flex-col justify-between  ">
         <div className="footer_head font-[Lausanne-500] flex items-center justify-between ">
           <ul className="flex gap-1.5   text-[clamp(1rem,5vw,9rem)] leading-[0.7] ">
             <li className="">
